@@ -95,6 +95,13 @@ h6 {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "DM Sans";
+  src: url("assets/fonts/subset-DMSans-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+}
+
 :root {
   --clr-purple-100: 254, 88%, 90%;
   --clr-purple-500: 256, 67%, 59%;
@@ -102,33 +109,89 @@ h6 {
   --clr-yellow-500: 39, 100%, 71%;
   --clr-white: 0, 0%, 100%;
   --clr-black: 0, 0%, 7%;
+  --clr-gray: 300, 5%, 96%;
 
   --ff-main: "DM Sans", sans-serif;
 }
 
 .text--big {
-  font-family: var(--ff-main);
-  font-size: 3.875rem;
+  font-size: 2.875rem;
+  /* desktop 62px, tablet 54px, mobile 46px*/
   line-height: 0.935;
   letter-spacing: -3px;
+  font-weight: 500;
 }
 
 .text--medium {
-  font-family: var(--ff-main);
-  font-size: 2.5rem;
+  font-size: 2rem;
+  /* desktop 40px, tablet 36px, mobile 32px*/
   line-height: 0.9;
   letter-spacing: -2px;
+  font-weight: 500;
 }
 
 .text--small {
-  font-family: var(--ff-main);
-  font-size: 2rem;
+  font-size: 1.625rem;
+  /* desktop 32px, tablet 28px, mobile 26px*/
   line-height: 0.875;
   letter-spacing: -2px;
+  font-weight: 500;
 }
 
 .text--tiny {
-  font-family: var(--ff-main);
   font-size: 1.125rem;
   line-height: 0.935;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--ff-main);
+  background-color: hsl(var(--clr-gray));
+}
+
+.bento {
+  padding: 0;
+  margin: 2rem 1rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.bento ::marker {
+  font-size: 0;
+}
+
+.bento__card {
+  border-radius: 0.625rem;
+  display: grid;
+  justify-items: center;
+}
+
+.bento__card--social {
+  background-color: hsl(var(--clr-purple-500));
+  padding: 2.5rem 2rem;
+  color: hsl(var(--clr-white));
+  text-align: center;
+}
+
+.bento__card--social strong {
+  color: hsl(var(--clr-yellow-500));
+  font-weight: 500;
+}
+
+.bento__card--social img {
+  margin: 1.5rem 0 0.5rem 0;
+  max-width: 12rem;
+}
+
+.bento__card--manage {
+  background-color: hsl(var(--clr-white));
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.bento__card--manage img {
+  background-color: white;
+  box-shadow: none;
 }
