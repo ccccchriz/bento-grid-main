@@ -140,7 +140,7 @@ h6 {
 
 .text--tiny {
   font-size: 1.125rem;
-  line-height: 0.935;
+  line-height: 1.125;
   font-weight: normal;
 }
 
@@ -194,4 +194,47 @@ body {
 .bento__card--manage img {
   background-color: white;
   box-shadow: none;
+}
+
+.bento__card--maintain {
+  display: grid;
+  gap: 1rem;
+  justify-items: start;
+  background-color: hsl(var(--clr-yellow-500));
+  overflow: hidden;
+  padding: 1rem 1rem 0 1rem;
+
+  overflow: hidden;
+  max-height: 13.515625rem;
+}
+
+.bento__card--maintain img {
+  max-width: 13rem;
+}
+
+.bento__card--schedule {
+  display: grid;
+  gap: 1.5rem;
+  background-color: hsl(var(--clr-purple-100));
+  overflow: hidden;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.bento__card--schedule span {
+  padding: 0 1rem;
+}
+
+.bento__card--grow {
+  color: hsl(var(--clr-white));
+  display: grid;
+  gap: 2.5rem;
+  background-color: hsl(var(--clr-purple-500));
+  overflow: hidden;
+  padding: 1.5rem 3.75rem;
+  text-align: center;
+}
+
+.bento__card--grow span {
+  padding: 0 1rem;
 }
