@@ -197,12 +197,14 @@ body {
 }
 
 .bento__card--maintain {
+  --padding-maintain: 1rem;
   display: grid;
   gap: 1rem;
   justify-items: start;
   background-color: hsl(var(--clr-yellow-500));
   overflow: hidden;
-  padding: 1rem 1rem 0 1rem;
+  padding: var(--padding-maintain) var(--padding-maintain) 0
+    var(--padding-maintain);
 
   overflow: hidden;
   max-height: 13.515625rem;
@@ -277,4 +279,73 @@ body {
 
 .bento__card--write img {
   max-width: 13.75rem;
+}
+
+@media (min-width: 34rem) {
+  .text--big {
+    font-size: 3.375rem;
+    /* desktop 62px, tablet 54px, mobile 46px*/
+  }
+
+  .text--medium {
+    font-size: 2.25rem;
+    /* desktop 40px, tablet 36px, mobile 32px*/
+  }
+
+  .text--small {
+    font-size: 1.75rem;
+    /* desktop 32px, tablet 28px, mobile 26px*/
+  }
+
+  .bento {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bento__card--social {
+    padding: 4.5rem;
+    grid-column: 1 / 3;
+  }
+
+  .bento__card--manage {
+    padding: 1.5rem;
+  }
+
+  .bento__card--maintain {
+    max-height: none;
+    --padding-maintain: 1.5rem;
+  }
+
+  .bento__card--schedule {
+    grid-column: 1 / 3;
+    padding: 2rem;
+  }
+
+  .bento__card--schedule * {
+    max-width: 22.5rem;
+  }
+
+  .bento__card--grow {
+    grid-column: 1 / 3;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    text-align: start;
+  }
+
+  .bento__card--grow img {
+    max-width: 14.25rem;
+  }
+
+  .bento__card--faster {
+    grid-column: 1 / 3;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .bento__card--faster img {
+    justify-self: end;
+  }
+
+  .bento__card--create span {
+    align-self: end;
+  }
 }
