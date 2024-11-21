@@ -281,7 +281,7 @@ body {
   max-width: 13.75rem;
 }
 
-@media (min-width: 34rem) {
+@media (min-width: 36rem) {
   .text--big {
     font-size: 3.375rem;
     /* desktop 62px, tablet 54px, mobile 46px*/
